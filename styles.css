@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgba(175,103,234,1);
+    background: -moz-linear-gradient(top, rgba(175,103,234,1) 0%, rgba(100,98,231,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(175,103,234,1)), color-stop(100%, rgba(100,98,231,1)));
+    background: -o-linear-gradient(top, rgba(175,103,234,1) 0%, rgba(100,98,231,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(175,103,234,1) 0%, rgba(100,98,231,1) 100%);
+    background: linear-gradient(to bottom, rgba(175,103,234,1) 0%, rgba(100,98,231,1) 100%);
+    background: -ms-linear-gradient(top, rgba(175,103,234,1) 0%, rgba(100,98,231,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af67ea', endColorstr='#6462e7', GradientType=0 );
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    width: 70%;
+    height: 60%;    
+}
+
+.img {
+    overflow: hidden;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    padding: 30%;
+    size: 50%;
+    background-position: 120% 80%;
+    background-repeat: no-repeat;
+    background-size: 170%;
+}
+
+.content {
+    size: 50%;
+}
