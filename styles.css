@@ -53,6 +53,7 @@ body {
 .content {
     color: hsl(240, 6%, 50%);
     size: 50%;
+    width: 100%;
     font-family: "Kumbh Sans";
     font-size: 12px;
     padding-top: 4rem;
@@ -67,21 +68,31 @@ hr {
     border:1px solid hsl(240, 5%, 91%);
 }
 
-.q-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.arrow{
-    padding: 1rem;
-    background: url(/images/icon-arrow-down.svg) no-repeat;
-    margin-top: 1.5rem;
-    margin-left: 1.5rem;
-}
-
 .question {
+    position: relative;
     padding: 1.3rem 30px 1.3rem 0;
-    margin-right: 30px;
+    cursor: pointer;
+}
+
+.question.active {
+    color: hsl(237, 12%, 33%);
+    font-weight: 700;
+    position: relative;
+    padding: 1.3rem 30px 1.3rem 0;
+    cursor: pointer;
+}
+
+.question::after{
+    content: url(/images/icon-arrow-down.svg);
+    position: absolute;
+    right: 1rem;
+}
+
+.question.active::after{
+    content: url(/images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+    position: absolute;
+    right: 1rem;
 }
 
 .answer {
