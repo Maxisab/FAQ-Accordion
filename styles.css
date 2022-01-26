@@ -51,6 +51,7 @@ body {
 }
 
 .content {
+    overflow: auto;
     color: hsl(240, 6%, 50%);
     size: 50%;
     width: 100%;
@@ -95,6 +96,9 @@ hr {
     right: 1rem;
 }
 
+.answer {
+    padding-bottom: 1rem;
+}
 .answer.hide {
     display: none;
 }
