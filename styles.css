@@ -95,6 +95,6 @@ hr {
     right: 1rem;
 }
 
-.answer {
+.answer.hide {
     display: none;
 }

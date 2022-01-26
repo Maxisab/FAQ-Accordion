@@ -13,6 +13,7 @@ function active(e) {
     if(validTarget(e)) {      
         console.log('yes')
         e.target.classList.toggle('active')
+        e.target.nextElementSibling.classList.toggle('hide')
     }
 }
 
