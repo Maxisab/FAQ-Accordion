@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --vdarktext--: hsl(238, 29%, 16%);
+    --regulartext--: hsl(237, 12%, 33%);
+    --lighttext--: hsl(240, 6%, 50%);
+}
+
 html {
     height: 100%;
 }
@@ -23,6 +29,10 @@ body {
     background: linear-gradient(to bottom, rgba(175,103,234,1) 0%, rgba(100,98,231,1) 100%);
     background: -ms-linear-gradient(top, rgba(175,103,234,1) 0%, rgba(100,98,231,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af67ea', endColorstr='#6462e7', GradientType=0 );
+}
+
+.mobile-hero {
+    display: none;
 }
 
 .container {
@@ -52,7 +62,7 @@ body {
 
 .content {
     overflow: auto;
-    color: hsl(240, 6%, 50%);
+    color: --regulartext--;
     size: 50%;
     width: 100%;
     font-family: "Kumbh Sans";
@@ -62,7 +72,7 @@ body {
 }
 
 h1{
-    color: hsl(237, 12%, 33%);
+    color: var(--vdarktext--);
 }
 
 hr {
@@ -76,7 +86,7 @@ hr {
 }
 
 .question.active {
-    color: hsl(237, 12%, 33%);
+    color: var(--vdarktext--);
     font-weight: 700;
     position: relative;
     padding: 1.3rem 30px 1.3rem 0;
@@ -98,7 +108,68 @@ hr {
 
 .answer {
     padding-bottom: 1rem;
+    color: var(--lighttext--);
 }
 .answer.hide {
     display: none;
+}
+
+/* phone break point */
+
+@media screen and (max-width: 600px)  {
+
+    body {
+        position: relative;
+        width: 95%;
+        margin: auto;
+        overflow: visible;
+    }
+
+    .mobile-hero {
+        z-index: 10;
+        overflow: visible;
+        position: absolute;
+        display: inline-block;
+        width: 214px;
+        top: 33px;
+        margin: auto;
+    }
+
+    .container img {
+       display: none;
+    }
+  
+    .container {
+        position: relative;
+        overflow: auto;
+        width: 90%;
+        height: 563px;
+        margin-top: 72px;
+    }
+
+    .img {
+        position: absolute;
+        overflow: visible;
+        width: 100%;
+        height: 563px;
+        background: url(/images/bg-pattern-desktop.svg) no-repeat;
+        margin: auto;
+        background-size: 220px;
+        top: -300px;
+        background-position: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .content {
+        overflow: scroll;
+        width: 90%;
+        margin: auto;
+        margin-top: 10rem;
+        padding: 0;
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
 }
