@@ -114,11 +114,32 @@ hr {
     display: none;
 }
 
+/* tablet break point */
+
+@media screen and (max-width: 950px ) {
+
+    .container {
+        width: 600px;
+    }
+    
+    .content {
+        padding-right: 2rem;
+    }
+
+    .container img {
+        position: absolute;
+        left: -47px;
+        top: 212px;
+        height: 20%;
+    }
+}
+
 /* phone break point */
 
 @media screen and (max-width: 600px)  {
 
     body {
+        align-items: baseline;
         position: relative;
         width: 95%;
         margin: auto;
@@ -144,7 +165,7 @@ hr {
         overflow: auto;
         width: 90%;
         height: 563px;
-        margin-top: 72px;
+        margin-top: 130px;
     }
 
     .img {
@@ -164,12 +185,10 @@ hr {
     }
 
     .content {
-        overflow: scroll;
+        overflow: auto;
         width: 90%;
         margin: auto;
         margin-top: 10rem;
         padding: 0;
-        /* align-items: center; */
-        /* justify-content: center; */
     }
 }
